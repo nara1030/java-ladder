@@ -10,12 +10,9 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 public class Participants {
-    private static final String SEPARATOR_OF_NAMES = ",";
-
     private final String[] names;
 
-    public Participants(final String names) {
-        String[] namesOfParticipants = names.split(SEPARATOR_OF_NAMES);
+    public Participants(final String[] namesOfParticipants) {
         validateNumberOfParticipants(namesOfParticipants);
         validateNameOfParticipants(namesOfParticipants);
         this.names = namesOfParticipants;

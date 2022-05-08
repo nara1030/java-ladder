@@ -15,8 +15,7 @@ public class Controller {
         Participants participants;
         while (true) {
             try {
-                String namesOfParticipants = InputView.inputNames();
-                participants = new Participants(namesOfParticipants);
+                participants = new Participants(InputView.inputNames());
                 break;
             } catch (InvalidNumberOfParticipantsException e) {
                 System.out.println(e.getMessage());
@@ -41,8 +40,7 @@ public class Controller {
         GameResult result;
         while (true) {
             try {
-                String gameResult = InputView.inputResult();
-                result = new GameResult(gameResult, participants);
+                result = new GameResult(InputView.inputResult(), participants);
                 break;
             } catch (InvalidNumberOfResultException e) {
                 System.out.println(e.getMessage());

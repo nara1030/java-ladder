@@ -8,16 +8,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class GameResult {
-    private static final String SEPARATOR_OF_NAMES = ",";
-
     private final String[] input;
     private final List<Integer> result;
 
-    public GameResult(String inputs, Participants participants) {
-        String[] input = inputs.split(SEPARATOR_OF_NAMES);
-        validateNumberOfResult(input, participants);
-        validateNameOfResult(input);
-        this.input = input;
+    public GameResult(String[] inputs, Participants participants) {
+        validateNumberOfResult(inputs, participants);
+        validateNameOfResult(inputs);
+        this.input = inputs;
         result = new ArrayList<>();
     }
 
