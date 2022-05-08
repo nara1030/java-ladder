@@ -1,7 +1,6 @@
 package ladder.view;
 
 import ladder.exception.InvalidHeightOfLadderException;
-import ladder.exception.NotFoundParticipantException;
 
 import java.util.Scanner;
 
