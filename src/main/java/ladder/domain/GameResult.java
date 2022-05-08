@@ -21,13 +21,13 @@ public class GameResult {
         result = new ArrayList<>();
     }
 
-    void validateNumberOfResult(String[] inputs, Participants participants) {
+    private void validateNumberOfResult(String[] inputs, Participants participants) {
         if (inputs.length != participants.getNumberOfParticipants()) {
             throw new InvalidNumberOfResultException(inputs.length, participants.getNumberOfParticipants());
         }
     }
 
-    void validateNameOfResult(String[] inputs) {
+    private void validateNameOfResult(String[] inputs) {
         for (String input : inputs) {
             validateNameOfResult(input);
         }

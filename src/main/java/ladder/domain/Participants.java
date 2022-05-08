@@ -21,13 +21,13 @@ public class Participants {
         this.names = namesOfParticipants;
     }
 
-    void validateNumberOfParticipants(String[] names) {
+    private void validateNumberOfParticipants(String[] names) {
         if (names.length == 0 || names.length == 1) {
             throw new InvalidNumberOfParticipantsException();
         }
     }
 
-    void validateNameOfParticipants(String[] names) {
+    private void validateNameOfParticipants(String[] names) {
         for (String name : names) {
             validateNameOfParticipants(name);
         }
