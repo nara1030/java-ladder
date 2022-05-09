@@ -4,7 +4,6 @@ import ladder.domain.GameResult;
 import ladder.domain.Line;
 import ladder.domain.Participants;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class ResultView {
@@ -68,5 +67,9 @@ public class ResultView {
             System.out.print(participants.getParticipant(i) + " : ");
             System.out.println(gameResult.getResultOfGame(i));
         }
+    }
+
+    public static void printMessage(final String message) {
+        System.out.println(message);
     }
 }

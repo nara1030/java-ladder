@@ -18,9 +18,9 @@ public class Controller {
                 participants = new Participants(InputView.inputNames());
                 break;
             } catch (InvalidNumberOfParticipantsException e) {
-                System.out.println(e.getMessage());
+                ResultView.printMessage(e.getMessage());
             } catch (InvalidNameOfParticipantException e) {
-                System.out.println(e.getMessage());
+                ResultView.printMessage(e.getMessage());
             }
         }
 
@@ -31,9 +31,9 @@ public class Controller {
                 InputView.validateHeightOfLadder(heightOfLadder);
                 break;
             } catch (NumberFormatException e) {
-                System.out.println(ERROR_MESSAGE_OF_HEIGHT_OF_LADDER);
+                ResultView.printMessage(ERROR_MESSAGE_OF_HEIGHT_OF_LADDER);
             } catch (InvalidHeightOfLadderException e) {
-                System.out.println(e.getMessage());
+                ResultView.printMessage(e.getMessage());
             }
         }
 
@@ -43,9 +43,9 @@ public class Controller {
                 result = new GameResult(InputView.inputResult(), participants);
                 break;
             } catch (InvalidNumberOfResultException e) {
-                System.out.println(e.getMessage());
+                ResultView.printMessage(e.getMessage());
             } catch (InvalidNameOfReulstException e) {
-                System.out.println(e.getMessage());
+                ResultView.printMessage(e.getMessage());
             }
         }
 
@@ -64,7 +64,7 @@ public class Controller {
                 String participantWhoNeedToResult = InputView.inputParticipantWhoWantToSeeResult();
                 ResultView.printResultOfGame(participants.contains(participantWhoNeedToResult), participants, result);
             } catch (NotFoundParticipantException e) {
-                System.out.println(e.getMessage());
+                ResultView.printMessage(e.getMessage());
             }
         }
     }
